@@ -1,5 +1,5 @@
 //
-//  DataSorter.h
+//  DefineID.h
 //  TestovoeRestaurant
 //
 //  Created by Uri Fuholichev on 10/8/16.
@@ -8,11 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DataSorter : NSObject
+@interface DefineID : NSObject
 
-
-
-
-//- (void)createArrayOfCategoriesAndImagesFromImgArray: (NSArray *)arr;
+-(NSString *)getIDFromCategoryName: (NSString *)name;
 
 @end

@@ -10,4 +10,6 @@
 
 @interface DishesViewController : UIViewController
 
+@property(nonatomic, strong) NSMutableArray *categoryDishes;
+
 @end

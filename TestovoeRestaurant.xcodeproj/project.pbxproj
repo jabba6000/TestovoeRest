@@ -21,6 +21,7 @@
 		16D402D71DA922270077ADC6 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402D61DA922270077ADC6 /* XMLParser.m */; };
 		16D402F41DA932F10077ADC6 /* DataSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402F31DA932F10077ADC6 /* DataSorter.m */; };
 		16D402F71DA938D60077ADC6 /* ArrayOfCategoryImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402F61DA938D60077ADC6 /* ArrayOfCategoryImages.m */; };
+		16D402FA1DA96C930077ADC6 /* DefineID.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402F91DA96C930077ADC6 /* DefineID.m */; };
 		C618E42DD03F2BA1358A7623 /* libPods-TestovoeRestaurant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A78ECC7C3EAE59DCCBFEEB8E /* libPods-TestovoeRestaurant.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,8 @@
 		16D402F31DA932F10077ADC6 /* DataSorter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSorter.m; sourceTree = "<group>"; };
 		16D402F51DA938D60077ADC6 /* ArrayOfCategoryImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayOfCategoryImages.h; sourceTree = "<group>"; };
 		16D402F61DA938D60077ADC6 /* ArrayOfCategoryImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayOfCategoryImages.m; sourceTree = "<group>"; };
+		16D402F81DA96C930077ADC6 /* DefineID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineID.h; sourceTree = "<group>"; };
+		16D402F91DA96C930077ADC6 /* DefineID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefineID.m; sourceTree = "<group>"; };
 		697BB0B8F5A5F1B08D028777 /* Pods-TestovoeRestaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestovoeRestaurant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestovoeRestaurant/Pods-TestovoeRestaurant.debug.xcconfig"; sourceTree = "<group>"; };
 		8E4D8839D7C915AFF3858124 /* Pods-TestovoeRestaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestovoeRestaurant.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestovoeRestaurant/Pods-TestovoeRestaurant.release.xcconfig"; sourceTree = "<group>"; };
 		A78ECC7C3EAE59DCCBFEEB8E /* libPods-TestovoeRestaurant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestovoeRestaurant.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +101,8 @@
 				16D402D61DA922270077ADC6 /* XMLParser.m */,
 				16D402F21DA932F10077ADC6 /* DataSorter.h */,
 				16D402F31DA932F10077ADC6 /* DataSorter.m */,
+				16D402F81DA96C930077ADC6 /* DefineID.h */,
+				16D402F91DA96C930077ADC6 /* DefineID.m */,
 				16D402F51DA938D60077ADC6 /* ArrayOfCategoryImages.h */,
 				16D402F61DA938D60077ADC6 /* ArrayOfCategoryImages.m */,
 				16D402B41DA906120077ADC6 /* Main.storyboard */,
@@ -277,6 +282,7 @@
 				16D402F41DA932F10077ADC6 /* DataSorter.m in Sources */,
 				16D402AD1DA906120077ADC6 /* main.m in Sources */,
 				16D402D41DA921700077ADC6 /* DataCollector.m in Sources */,
+				16D402FA1DA96C930077ADC6 /* DefineID.m in Sources */,
 				16D402D01DA90B160077ADC6 /* DishCardViewController.m in Sources */,
 				16D402CA1DA90AC40077ADC6 /* CategoriesViewController.m in Sources */,
 				16D402C41DA909A20077ADC6 /* MenuViewController.m in Sources */,

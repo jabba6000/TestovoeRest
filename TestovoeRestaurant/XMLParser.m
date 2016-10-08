@@ -55,7 +55,8 @@
     NSLog(@"PARSER THE COUNT IS %lu", (unsigned long)[ [DataCollector sharedInstance].categoryNamesArray count]);
     for(NSString *str in [DataCollector sharedInstance].categoryNamesArray)
         NSLog(@"%@", str);
-
+    
+    [DataCollector sharedInstance].allDishesArray = self.allOffersDataArray;
 //    [self.myTableView reloadData];
 }
 

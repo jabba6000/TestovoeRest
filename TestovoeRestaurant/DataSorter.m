@@ -12,6 +12,8 @@
 
 @implementation DataSorter
 
+
+
 //- (void )createArrayOfCategoryImages: (NSArray *)arr{
 //
 //    NSMutableArray *arrayOfCategoriesNamesWithImages = [NSMutableArray new];
