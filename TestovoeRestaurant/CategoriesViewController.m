@@ -9,6 +9,12 @@
 #import "CategoriesViewController.h"
 #import "SWRevealViewController.h"
 
+@interface CategoriesViewController()
+
+@property (strong, nonatomic) IBOutlet UITableView *categoriesTableView;
+
+@end
+
 @implementation CategoriesViewController
 
 - (void) viewDidLoad {

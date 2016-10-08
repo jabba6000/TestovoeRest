@@ -17,6 +17,8 @@
 		16D402CA1DA90AC40077ADC6 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402C91DA90AC40077ADC6 /* CategoriesViewController.m */; };
 		16D402CD1DA90B050077ADC6 /* DishesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402CC1DA90B050077ADC6 /* DishesViewController.m */; };
 		16D402D01DA90B160077ADC6 /* DishCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402CF1DA90B160077ADC6 /* DishCardViewController.m */; };
+		16D402D41DA921700077ADC6 /* DataCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402D31DA921700077ADC6 /* DataCollector.m */; };
+		16D402D71DA922270077ADC6 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402D61DA922270077ADC6 /* XMLParser.m */; };
 		C618E42DD03F2BA1358A7623 /* libPods-TestovoeRestaurant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A78ECC7C3EAE59DCCBFEEB8E /* libPods-TestovoeRestaurant.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,10 @@
 		16D402CC1DA90B050077ADC6 /* DishesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishesViewController.m; sourceTree = "<group>"; };
 		16D402CE1DA90B160077ADC6 /* DishCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCardViewController.h; sourceTree = "<group>"; };
 		16D402CF1DA90B160077ADC6 /* DishCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCardViewController.m; sourceTree = "<group>"; };
+		16D402D21DA921700077ADC6 /* DataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCollector.h; sourceTree = "<group>"; };
+		16D402D31DA921700077ADC6 /* DataCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCollector.m; sourceTree = "<group>"; };
+		16D402D51DA922270077ADC6 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		16D402D61DA922270077ADC6 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
 		697BB0B8F5A5F1B08D028777 /* Pods-TestovoeRestaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestovoeRestaurant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestovoeRestaurant/Pods-TestovoeRestaurant.debug.xcconfig"; sourceTree = "<group>"; };
 		8E4D8839D7C915AFF3858124 /* Pods-TestovoeRestaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestovoeRestaurant.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestovoeRestaurant/Pods-TestovoeRestaurant.release.xcconfig"; sourceTree = "<group>"; };
 		A78ECC7C3EAE59DCCBFEEB8E /* libPods-TestovoeRestaurant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestovoeRestaurant.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +86,10 @@
 				16D402AE1DA906120077ADC6 /* AppDelegate.h */,
 				16D402AF1DA906120077ADC6 /* AppDelegate.m */,
 				16D402D11DA920320077ADC6 /* ViewControllers */,
+				16D402D21DA921700077ADC6 /* DataCollector.h */,
+				16D402D31DA921700077ADC6 /* DataCollector.m */,
+				16D402D51DA922270077ADC6 /* XMLParser.h */,
+				16D402D61DA922270077ADC6 /* XMLParser.m */,
 				16D402B41DA906120077ADC6 /* Main.storyboard */,
 				16D402B71DA906120077ADC6 /* Assets.xcassets */,
 				16D402B91DA906120077ADC6 /* LaunchScreen.storyboard */,
@@ -255,9 +265,11 @@
 				16D402B01DA906120077ADC6 /* AppDelegate.m in Sources */,
 				16D402C71DA90A3C0077ADC6 /* ContactsViewController.m in Sources */,
 				16D402AD1DA906120077ADC6 /* main.m in Sources */,
+				16D402D41DA921700077ADC6 /* DataCollector.m in Sources */,
 				16D402D01DA90B160077ADC6 /* DishCardViewController.m in Sources */,
 				16D402CA1DA90AC40077ADC6 /* CategoriesViewController.m in Sources */,
 				16D402C41DA909A20077ADC6 /* MenuViewController.m in Sources */,
+				16D402D71DA922270077ADC6 /* XMLParser.m in Sources */,
 				16D402CD1DA90B050077ADC6 /* DishesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
