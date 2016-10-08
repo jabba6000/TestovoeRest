@@ -50,9 +50,12 @@
 -(void)parserDidEndDocument:(NSXMLParser *)parser{
     // When the parsing has been finished then simply reload the table view.
     NSLog(@"Total count of offers is %lu", (unsigned long)[self.allOffersDataArray count]);
-    for(NSString *str in _categoriesNamesArray)
+    
+    [DataCollector sharedInstance].categoryNamesArray = _categoriesNamesArray;
+    NSLog(@"PARSER THE COUNT IS %lu", (unsigned long)[ [DataCollector sharedInstance].categoryNamesArray count]);
+    for(NSString *str in [DataCollector sharedInstance].categoryNamesArray)
         NSLog(@"%@", str);
-    [DataCollector sharedInstance].temporaryArrayOfCategoriesNames = _categoriesNamesArray;
+
 //    [self.myTableView reloadData];
 }
 

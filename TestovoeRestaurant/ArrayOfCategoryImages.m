@@ -7,10 +7,11 @@
 //
 
 #import "ArrayOfCategoryImages.h"
+#import "DataCollector.h"
 
 @implementation ArrayOfCategoryImages
 
-- (NSArray *)createArrayOfCategoriesAndImages{
+- (void)createArrayOfImages{
 
     //Get array of random pictures from http://www.iconbeast.com/
     NSArray *arrayWithImages = [[NSArray alloc] initWithObjects:
@@ -28,7 +29,8 @@
                                 [UIImage imageNamed:@"tree.png"],
                                 [UIImage imageNamed:@"water.png"],
                                 nil];
-    return arrayWithImages;
+    
+    [DataCollector sharedInstance].categoryImagesArray = arrayWithImages;
 }
 
 @end

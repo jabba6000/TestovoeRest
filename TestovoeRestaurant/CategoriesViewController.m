@@ -8,8 +8,9 @@
 
 #import "CategoriesViewController.h"
 #import "SWRevealViewController.h"
+#import "DataCollector.h"
 
-@interface CategoriesViewController()
+@interface CategoriesViewController() <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *categoriesTableView;
 
@@ -23,6 +24,27 @@
     if ( revealViewController ){
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    
+    self.categoriesTableView.delegate = self;
+    self.categoriesTableView.dataSource = self;
+    NSLog(@"LOADED!");
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [[DataCollector sharedInstance].categoryImagesArray count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell;
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        //        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    cell.textLabel.text = [[DataCollector sharedInstance].categoryNamesArray objectAtIndex:indexPath.row] ;
+    cell.imageView.image = [[DataCollector sharedInstance].categoryImagesArray objectAtIndex:indexPath.row];
+    
+    return cell;
 }
 
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "DataSorter.h"
+#import "DataCollector.h"
+#import "ArrayOfCategoryImages.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +23,8 @@
     
     XMLParser *parser = [XMLParser new];
     [parser performParsing];
+    ArrayOfCategoryImages *imageArray = [ArrayOfCategoryImages new];
+    [imageArray createArrayOfImages];
     
     return YES;
 }
