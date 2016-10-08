@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DishCardViewController.h
 //  TestovoeRestaurant
 //
 //  Created by Uri Fuholichev on 10/8/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DishCardViewController : UIViewController
 
 @end
-

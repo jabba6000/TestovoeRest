@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		16D402AD1DA906120077ADC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402AC1DA906120077ADC6 /* main.m */; };
 		16D402B01DA906120077ADC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402AF1DA906120077ADC6 /* AppDelegate.m */; };
-		16D402B31DA906120077ADC6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402B21DA906120077ADC6 /* ViewController.m */; };
 		16D402B61DA906120077ADC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D402B41DA906120077ADC6 /* Main.storyboard */; };
 		16D402B81DA906120077ADC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16D402B71DA906120077ADC6 /* Assets.xcassets */; };
 		16D402BB1DA906120077ADC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D402B91DA906120077ADC6 /* LaunchScreen.storyboard */; };
+		16D402C41DA909A20077ADC6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402C31DA909A20077ADC6 /* MenuViewController.m */; };
+		16D402C71DA90A3C0077ADC6 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402C61DA90A3C0077ADC6 /* ContactsViewController.m */; };
+		16D402CA1DA90AC40077ADC6 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402C91DA90AC40077ADC6 /* CategoriesViewController.m */; };
+		16D402CD1DA90B050077ADC6 /* DishesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402CC1DA90B050077ADC6 /* DishesViewController.m */; };
+		16D402D01DA90B160077ADC6 /* DishCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402CF1DA90B160077ADC6 /* DishCardViewController.m */; };
 		C618E42DD03F2BA1358A7623 /* libPods-TestovoeRestaurant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A78ECC7C3EAE59DCCBFEEB8E /* libPods-TestovoeRestaurant.a */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +25,20 @@
 		16D402AC1DA906120077ADC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		16D402AE1DA906120077ADC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		16D402AF1DA906120077ADC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		16D402B11DA906120077ADC6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		16D402B21DA906120077ADC6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		16D402B51DA906120077ADC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16D402B71DA906120077ADC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16D402BA1DA906120077ADC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16D402BC1DA906120077ADC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D402C21DA909A20077ADC6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		16D402C31DA909A20077ADC6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		16D402C51DA90A3C0077ADC6 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		16D402C61DA90A3C0077ADC6 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		16D402C81DA90AC40077ADC6 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
+		16D402C91DA90AC40077ADC6 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
+		16D402CB1DA90B050077ADC6 /* DishesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishesViewController.h; sourceTree = "<group>"; };
+		16D402CC1DA90B050077ADC6 /* DishesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishesViewController.m; sourceTree = "<group>"; };
+		16D402CE1DA90B160077ADC6 /* DishCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DishCardViewController.h; sourceTree = "<group>"; };
+		16D402CF1DA90B160077ADC6 /* DishCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishCardViewController.m; sourceTree = "<group>"; };
 		697BB0B8F5A5F1B08D028777 /* Pods-TestovoeRestaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestovoeRestaurant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestovoeRestaurant/Pods-TestovoeRestaurant.debug.xcconfig"; sourceTree = "<group>"; };
 		8E4D8839D7C915AFF3858124 /* Pods-TestovoeRestaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestovoeRestaurant.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestovoeRestaurant/Pods-TestovoeRestaurant.release.xcconfig"; sourceTree = "<group>"; };
 		A78ECC7C3EAE59DCCBFEEB8E /* libPods-TestovoeRestaurant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestovoeRestaurant.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,8 +79,7 @@
 			children = (
 				16D402AE1DA906120077ADC6 /* AppDelegate.h */,
 				16D402AF1DA906120077ADC6 /* AppDelegate.m */,
-				16D402B11DA906120077ADC6 /* ViewController.h */,
-				16D402B21DA906120077ADC6 /* ViewController.m */,
+				16D402D11DA920320077ADC6 /* ViewControllers */,
 				16D402B41DA906120077ADC6 /* Main.storyboard */,
 				16D402B71DA906120077ADC6 /* Assets.xcassets */,
 				16D402B91DA906120077ADC6 /* LaunchScreen.storyboard */,
@@ -84,6 +95,23 @@
 				16D402AC1DA906120077ADC6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16D402D11DA920320077ADC6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				16D402C21DA909A20077ADC6 /* MenuViewController.h */,
+				16D402C31DA909A20077ADC6 /* MenuViewController.m */,
+				16D402C51DA90A3C0077ADC6 /* ContactsViewController.h */,
+				16D402C61DA90A3C0077ADC6 /* ContactsViewController.m */,
+				16D402C81DA90AC40077ADC6 /* CategoriesViewController.h */,
+				16D402C91DA90AC40077ADC6 /* CategoriesViewController.m */,
+				16D402CB1DA90B050077ADC6 /* DishesViewController.h */,
+				16D402CC1DA90B050077ADC6 /* DishesViewController.m */,
+				16D402CE1DA90B160077ADC6 /* DishCardViewController.h */,
+				16D402CF1DA90B160077ADC6 /* DishCardViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		7753C88AACA889908F1B2082 /* Frameworks */ = {
@@ -224,9 +252,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16D402B31DA906120077ADC6 /* ViewController.m in Sources */,
 				16D402B01DA906120077ADC6 /* AppDelegate.m in Sources */,
+				16D402C71DA90A3C0077ADC6 /* ContactsViewController.m in Sources */,
 				16D402AD1DA906120077ADC6 /* main.m in Sources */,
+				16D402D01DA90B160077ADC6 /* DishCardViewController.m in Sources */,
+				16D402CA1DA90AC40077ADC6 /* CategoriesViewController.m in Sources */,
+				16D402C41DA909A20077ADC6 /* MenuViewController.m in Sources */,
+				16D402CD1DA90B050077ADC6 /* DishesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
