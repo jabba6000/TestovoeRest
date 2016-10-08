@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="ZBq-Nq-q9a" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="kJd-ST-fcV"/>
                         <segue destination="j3W-wy-Tc9" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="XvE-er-iNx"/>
+                        <segue destination="023-wB-ZRu" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="C0c-Iz-Zzs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,13 +88,22 @@
                     <view key="view" contentMode="scaleToFill" id="XvD-f1-LN9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D4A-Qh-nar">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.78039215689999997" green="0.89019607840000003" blue="0.66274509800000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="dishesTableView" destination="D4A-Qh-nar" id="wR5-Fw-91b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HX-Am-njc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213" y="294"/>
+            <point key="canvasLocation" x="1257" y="294"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="NP0-3y-fj0">
