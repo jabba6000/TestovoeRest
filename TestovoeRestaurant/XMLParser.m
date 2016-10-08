@@ -7,6 +7,7 @@
 //
 
 #import "XMLParser.h"
+#import "DataCollector.h"
 
 @interface XMLParser()
 
@@ -16,7 +17,7 @@
 @property (nonatomic, strong) NSMutableArray *allOffersDataArray;
 // We’ll store values we seek inside dictionary (One dictionary for each offer).
 @property (nonatomic, strong) NSMutableDictionary *offerDataDictionary;
-//arrayForCategoriesNames
+// array For Categorie's Names
 @property (nonatomic, strong) NSMutableArray *categoriesNamesArray;
 // The foundValue mutable string will be used to store the found characters of the elements of interest.
 @property (nonatomic, strong) NSMutableString *foundValue;
@@ -51,6 +52,7 @@
     NSLog(@"Total count of offers is %lu", (unsigned long)[self.allOffersDataArray count]);
     for(NSString *str in _categoriesNamesArray)
         NSLog(@"%@", str);
+    [DataCollector sharedInstance].temporaryArrayOfCategoriesNames = _categoriesNamesArray;
 //    [self.myTableView reloadData];
 }
 

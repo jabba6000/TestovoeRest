@@ -10,9 +10,9 @@
 
 @interface DataCollector : NSObject
 
-@property (strong, nonatomic) NSString *latitude;
-@property (strong, nonatomic) NSString *longitude;
-@property (strong, nonatomic) NSString *address;
+@property (strong, nonatomic) NSArray *temporaryArrayOfCategoriesNames;
+//Array contain categories and images for categories. It will be used in Category VC tableView
+@property (strong, nonatomic) NSArray *arrayOfCategoriesAndImages;
 
 +(DataCollector *)sharedInstance;
 
