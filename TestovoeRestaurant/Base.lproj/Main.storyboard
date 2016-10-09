@@ -68,15 +68,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="L1J-jl-FtY">
-                                <rect key="frame" x="150" y="181" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.60715558479999998" green="1" blue="0.96714836390000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="L1J-jl-FtY" id="Uc7-fS-kqf"/>
                         <outlet property="dishDescription" destination="1mY-nI-2Bd" id="mIz-8U-TSx"/>
                         <outlet property="dishImageView" destination="Cgp-hs-OO7" id="7QW-06-3bj"/>
                         <outlet property="dishName" destination="NVA-G3-oTL" id="X0v-cG-VXG"/>

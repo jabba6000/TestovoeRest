@@ -43,12 +43,10 @@
     }
     else if ([[_dish objectForKey:@"picture"] isEqual:@""]){
         _dishImageView.image = [UIImage imageNamed:@"na.jpg"];
-        _activityIndicator.hidden = YES;
         }
     else{
+        _dishImageView.image = [UIImage imageNamed:@"logo.png"];
         NSLog(@"No image");
-        _activityIndicator.hidesWhenStopped = YES;
-        [_activityIndicator startAnimating];
         dispatch_async(dispatch_get_main_queue(), ^{
             
             NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[_dish objectForKey:@"picture"]]];
@@ -57,7 +55,6 @@
             
             [[DataCollector sharedInstance].dishesImagesDictionary setObject:image forKey:[_dish objectForKey:@"name"]];
             _dishImageView.image = [[DataCollector sharedInstance].dishesImagesDictionary objectForKey:[_dish objectForKey:@"name"]];
-            [_activityIndicator stopAnimating];
         });
     }
 
