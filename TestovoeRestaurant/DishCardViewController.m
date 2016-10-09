@@ -17,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *dishPrice;
 @property (strong, nonatomic) IBOutlet UILabel *dishDescription;
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 @end
 
 @implementation DishCardViewController
@@ -36,7 +38,29 @@
     else
         _dishDescription.text = [NSString stringWithFormat:@"Описание: %@",[_dish objectForKey:@"description"] ];
     
-    _dishImageView.image = [[DataCollector sharedInstance].dishesImagesDictionary objectForKey:[_dish objectForKey:@"name"]];
+    if( ![[[DataCollector sharedInstance].dishesImagesDictionary objectForKey:[_dish objectForKey:@"name"]] isEqual:@"none"]){
+        _dishImageView.image = [[DataCollector sharedInstance].dishesImagesDictionary objectForKey:[_dish objectForKey:@"name"]];
+    }
+    else if ([[_dish objectForKey:@"picture"] isEqual:@""]){
+        _dishImageView.image = [UIImage imageNamed:@"na.jpg"];
+        _activityIndicator.hidden = YES;
+        }
+    else{
+        NSLog(@"No image");
+        _activityIndicator.hidesWhenStopped = YES;
+        [_activityIndicator startAnimating];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[_dish objectForKey:@"picture"]]];
+            
+            UIImage* image = [[UIImage alloc] initWithData:imageData];
+            
+            [[DataCollector sharedInstance].dishesImagesDictionary setObject:image forKey:[_dish objectForKey:@"name"]];
+            _dishImageView.image = [[DataCollector sharedInstance].dishesImagesDictionary objectForKey:[_dish objectForKey:@"name"]];
+            [_activityIndicator stopAnimating];
+        });
+    }
+
 }
 
 - (void) viewDidAppear{
