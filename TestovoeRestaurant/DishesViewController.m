@@ -75,7 +75,7 @@
                             [cell setNeedsLayout];
                             //Это обновляет ячейки, которые уже получили данные
                             //Чтобы они начали отображать картинку
-                            [self.dishesTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//                            [self.dishesTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
                         }
                     });
                 }
