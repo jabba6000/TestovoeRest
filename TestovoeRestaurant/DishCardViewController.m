@@ -31,10 +31,11 @@
     _dishName.text = [_dish objectForKey:@"name"];
     _dishWeight.text = [NSString stringWithFormat:@"Вес: %@", [_dish objectForKey:@"weight"]];
     _dishPrice.text = [NSString stringWithFormat:@"Цена: %@",[_dish objectForKey:@"price"]];
-    if (![[_dish allKeys] containsObject:@"description"])
+    if ([[_dish objectForKey:@"description"] isEqual:@""])
         _dishDescription.text = @"Описание отсутствует";
     else
         _dishDescription.text = [NSString stringWithFormat:@"Описание: %@",[_dish objectForKey:@"description"] ];
+    
     _dishImageView.image = [[DataCollector sharedInstance].dishesImagesDictionary objectForKey:[_dish objectForKey:@"name"]];
 }
 
