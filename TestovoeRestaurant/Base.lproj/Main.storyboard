@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="ZBq-Nq-q9a" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="kJd-ST-fcV"/>
                         <segue destination="j3W-wy-Tc9" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="XvE-er-iNx"/>
+                        <segue destination="IDc-dp-K7l" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="nNB-gS-cQ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -154,12 +155,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kal-Nz-eCc">
-                                <rect key="frame" x="139" y="127" width="43" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kal-Nz-eCc">
+                                <rect key="frame" x="112" y="46" width="97" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkw-UT-fkQ">
+                                <rect key="frame" x="20" y="124" width="78" height="30"/>
+                                <color key="backgroundColor" red="0.79141388499999998" green="1" blue="0.78886501539999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Каталог">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j3W-wy-Tc9" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="0ss-fa-E2S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9I-eY-ipo">
+                                <rect key="frame" x="20" y="162" width="78" height="30"/>
+                                <color key="backgroundColor" red="0.79141388499999998" green="1" blue="0.78886501539999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Контакты">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IDc-dp-K7l" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Y6y-OL-TB4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98198539018630981" green="0.97417479753494263" blue="0.012557928450405598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -167,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ErI-sN-Z50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="467.5" y="842.5"/>
+            <point key="canvasLocation" x="467" y="842"/>
         </scene>
         <!--Contacts View Controller-->
         <scene sceneID="BhS-Yq-9xl">
@@ -194,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwi-c1-a3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="467" y="1392"/>
+            <point key="canvasLocation" x="467" y="1516"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mzK-0V-5bz">
@@ -235,4 +256,8 @@
             <point key="canvasLocation" x="1257" y="294"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Y6y-OL-TB4"/>
+        <segue reference="0ss-fa-E2S"/>
+    </inferredMetricsTieBreakers>
 </document>

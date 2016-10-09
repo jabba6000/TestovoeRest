@@ -7,7 +7,16 @@
 //
 
 #import "ContactsViewController.h"
+#import "SWRevealViewController.h"
 
 @implementation ContactsViewController
+
+- (void) viewDidLoad {
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController ){
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+}
 
 @end
