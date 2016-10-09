@@ -10,4 +10,6 @@
 
 @interface DishCardViewController : UIViewController
 
+@property (strong, nonatomic) NSMutableDictionary *dish;
+
 @end
