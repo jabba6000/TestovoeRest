@@ -38,12 +38,14 @@
     self.foundValue = [[NSMutableString alloc] init];
     
     [self.xmlParser parse];
+    
 }
 
 #pragma mark - NSXMLParser Delegate methods
 
 -(void)parserDidStartDocument:(NSXMLParser *)parser{
     // Initialize the neighbours data array.
+    [DataCollector sharedInstance].dishesImagesDictionary = [NSMutableDictionary new];
     self.allOffersDataArray = [[NSMutableArray alloc] init];
 }
 
@@ -88,7 +90,11 @@
     }
     if ([elementName isEqualToString:@"picture"]){
         NSString *picture = [self.foundValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        [self.offerDataDictionary setObject:[NSString stringWithString:picture] forKey:@"picture"];        NSLog(@"%@", [self.offerDataDictionary objectForKey:@"picture"]);
+        [self.offerDataDictionary setObject:[NSString stringWithString:picture] forKey:@"picture"];
+        //And we add string object, which will be replaced later for an image
+        [self.offerDataDictionary setObject:@"none" forKey:@"dishImage"];
+//        NSLog(@"%@", [self.offerDataDictionary objectForKey:@"picture"]);
+//        NSLog(@"%@", [self.offerDataDictionary objectForKey:@"dishImage"]);
     }
     if ([elementName isEqualToString:@"price"]){
         NSString *weight = [self.foundValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -97,6 +103,9 @@
     }
     if ([elementName isEqualToString:@"name"]){
         [self.offerDataDictionary setObject:[NSString stringWithString:self.foundValue] forKey:@"name"];
+        //ANd here we add string to dictionary of DishesImages
+        [[DataCollector sharedInstance].dishesImagesDictionary setObject:@"none" forKey:[NSString stringWithFormat:@"%@", self.foundValue]];
+        NSLog(@"singl is %@", [DataCollector sharedInstance].dishesImagesDictionary);
         NSLog(@"%@", [self.offerDataDictionary objectForKey:@"name"]);
     }
     if ([elementName isEqualToString:@"categoryId"]){

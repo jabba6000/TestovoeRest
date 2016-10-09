@@ -15,6 +15,9 @@
 @property (strong, nonatomic) NSArray *categoryImagesArray;
 @property (strong, nonatomic) NSArray *allDishesArray;
 
+@property (strong, nonatomic) NSMutableDictionary *dishesImagesDictionary;
+
+
 +(DataCollector *)sharedInstance;
 
 @end
