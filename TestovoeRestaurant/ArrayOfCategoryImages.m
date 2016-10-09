@@ -11,9 +11,8 @@
 
 @implementation ArrayOfCategoryImages
 
-- (void)createArrayOfImages{
-
-    //Get array of random pictures from http://www.iconbeast.com/
+- (void)createArrayOfImages {
+    // Array of random pictures from http://www.iconbeast.com/
     NSArray *arrayWithImages = [[NSArray alloc] initWithObjects:
                                 [UIImage imageNamed:@"airplane.png"],
                                 [UIImage imageNamed:@"antique-vase.png"],
@@ -29,7 +28,6 @@
                                 [UIImage imageNamed:@"tree.png"],
                                 [UIImage imageNamed:@"water.png"],
                                 nil];
-    
     [DataCollector sharedInstance].categoryImagesArray = arrayWithImages;
 }
 

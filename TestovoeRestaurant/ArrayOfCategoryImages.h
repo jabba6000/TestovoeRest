@@ -11,7 +11,7 @@
 
 @interface ArrayOfCategoryImages : NSObject
 
-//the only meaning of this class is to create and return array of images, imported in project
+// The only meaning of this class is to create and return array of images, previously imported in project
 - (void)createArrayOfImages;
 
 @end

@@ -21,8 +21,7 @@
 
 @implementation DishCardViewController
 
--(void) viewDidLoad{
-
+- (void) viewDidLoad {
     _dishName.text = [_dish objectForKey:@"name"];
     _dishWeight.text = [NSString stringWithFormat:@"Вес: %@", [_dish objectForKey:@"weight"]];
     _dishPrice.text = [NSString stringWithFormat:@"Цена: %@",[_dish objectForKey:@"price"]];
@@ -32,19 +31,23 @@
     else
         _dishDescription.text = [NSString stringWithFormat:@"Описание: %@",[_dish objectForKey:@"description"] ];
     
-    if( ![[[DataCollector sharedInstance].dishesImagesDictionary objectForKey:[_dish objectForKey:@"name"]] isEqual:@"none"]){
+    if( ![[[DataCollector sharedInstance].dishesImagesDictionary objectForKey:[_dish objectForKey:@"name"]] isEqual:@"none"]) {
+        // If we already have iamge to show, it will be intalled in DishCard
         _dishImageView.image = [[DataCollector sharedInstance].dishesImagesDictionary objectForKey:[_dish objectForKey:@"name"]];
     }
     else if ([[_dish objectForKey:@"picture"] isEqual:@""]){
         _dishImageView.image = [UIImage imageNamed:@"na.jpg"];
         }
     else{
+        // If don't have image for dish we should perform it's dowload
         _dishImageView.image = [UIImage imageNamed:@"logo.png"];
         dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
         dispatch_async(queue, ^(void) {
+            // Again, not to freeze UI, we perform download of image asynchronously
             NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:[_dish objectForKey:@"picture"]]];
             UIImage* image = [[UIImage alloc] initWithData:imageData];
             if (image){
+                // When it "arrives", we install image on the card on main thread
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [[DataCollector sharedInstance].dishesImagesDictionary setObject:image forKey:[_dish objectForKey:@"name"]];
                     _dishImageView.image = [[DataCollector sharedInstance].dishesImagesDictionary objectForKey:[_dish objectForKey:@"name"]];

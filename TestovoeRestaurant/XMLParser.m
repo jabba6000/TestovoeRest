@@ -30,44 +30,33 @@
 
 - (void)performParsing{
     _categoriesNamesArray = [NSMutableArray new];
-    //создали экземпляр Парсера, объявляем его делегаты и парсим!
     self.xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://ufa.farfor.ru/getyml/?key=ukAXxeJYZN"]];
     [self.xmlParser setDelegate: self];
-    
     // Initialize the mutable string that we'll use during parsing.
     self.foundValue = [[NSMutableString alloc] init];
-    
     [self.xmlParser parse];
-    
 }
 
 #pragma mark - NSXMLParser Delegate methods
 
--(void)parserDidStartDocument:(NSXMLParser *)parser{
-    // Initialize the neighbours data array.
+- (void)parserDidStartDocument:(NSXMLParser *)parser {
+    // Initialize the dictionary for images and array for offers.
     [DataCollector sharedInstance].dishesImagesDictionary = [NSMutableDictionary new];
     self.allOffersDataArray = [[NSMutableArray alloc] init];
 }
 
--(void)parserDidEndDocument:(NSXMLParser *)parser{
-    // When the parsing has been finished then simply reload the table view.
+- (void)parserDidEndDocument:(NSXMLParser *)parser {
     NSLog(@"Total count of offers is %lu", (unsigned long)[self.allOffersDataArray count]);
-    
     [DataCollector sharedInstance].categoryNamesArray = _categoriesNamesArray;
-    NSLog(@"PARSER THE COUNT IS %lu", (unsigned long)[ [DataCollector sharedInstance].categoryNamesArray count]);
-    for(NSString *str in [DataCollector sharedInstance].categoryNamesArray)
-        NSLog(@"%@", str);
-    
+    // At the end we pass all data to Data Collector object's array.
     [DataCollector sharedInstance].allDishesArray = self.allOffersDataArray;
-//    [self.myTableView reloadData];
 }
 
--(void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError{
+- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError{
     NSLog(@"%@", [parseError localizedDescription]);
 }
 
--(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
-    
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     if ([elementName containsString:@"offer"]) {
         self.offerDataDictionary = [[NSMutableDictionary alloc] init];
     }
@@ -83,47 +72,39 @@
     self.currentElement = elementName;
 }
 
--(void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName{
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     
+    //When we find "offer" string it means that we dealing with new dish object, need to collect it's fields data
     if ([elementName isEqualToString:@"offer"]) {
         [self.allOffersDataArray addObject:[[NSDictionary alloc] initWithDictionary:self.offerDataDictionary]];
     }
     if ([elementName isEqualToString:@"picture"]){
+        // picture - it means only string with URL of image for each dish
         NSString *picture = [self.foundValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         [self.offerDataDictionary setObject:[NSString stringWithString:picture] forKey:@"picture"];
-        //And we add string object, which will be replaced later for an image
         [self.offerDataDictionary setObject:@"none" forKey:@"dishImage"];
-//        NSLog(@"%@", [self.offerDataDictionary objectForKey:@"picture"]);
-//        NSLog(@"%@", [self.offerDataDictionary objectForKey:@"dishImage"]);
     }
     if ([elementName isEqualToString:@"price"]){
         NSString *weight = [self.foundValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         [self.offerDataDictionary setObject:[NSString stringWithString:weight] forKey:@"price"];
-        NSLog(@"%@", [self.offerDataDictionary objectForKey:@"price"]);
     }
     if ([elementName isEqualToString:@"name"]){
         [self.offerDataDictionary setObject:[NSString stringWithString:self.foundValue] forKey:@"name"];
-        //ANd here we add string to dictionary of DishesImages
+        //And here we add string to dictionary of DishesImagesm, it will be replaced with image object later
         [[DataCollector sharedInstance].dishesImagesDictionary setObject:@"none" forKey:[NSString stringWithFormat:@"%@", self.foundValue]];
-        NSLog(@"singl is %@", [DataCollector sharedInstance].dishesImagesDictionary);
-        NSLog(@"%@", [self.offerDataDictionary objectForKey:@"name"]);
     }
     if ([elementName isEqualToString:@"categoryId"]){
         NSString *countId = [self.foundValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         [self.offerDataDictionary setObject:countId forKey:@"categoryId"];
-        NSLog(@"%@", [self.offerDataDictionary objectForKey:@"categoryId"]);
     }
     if ([elementName isEqualToString:@"description"]){
         NSString *weight = [self.foundValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         [self.offerDataDictionary setObject:[NSString stringWithString:weight] forKey:@"description"];
-        NSLog(@"Descr: %@", [self.offerDataDictionary objectForKey:@"description"]);
     }
     if ([elementName isEqualToString:@"param"]){
         if([self.foundValue containsString:@"гр"]){
             NSString *weight = [self.foundValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-            
             [self.offerDataDictionary setObject:[NSString stringWithString:weight] forKey:@"weight"];
-            NSLog(@"%@", [self.offerDataDictionary objectForKey:@"weight"]);
         }
     }
     if ([elementName isEqualToString:@"category"]){
@@ -134,7 +115,7 @@
     [self.foundValue setString:@""];
 }
 
--(void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     // Store the found characters if only we're interested in the current element.
     if ([self.currentElement isEqualToString:@"name"] ||
         [self.currentElement isEqualToString:@"price"] ||

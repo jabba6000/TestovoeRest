@@ -10,4 +10,6 @@
 
 @interface MenuViewController : UIViewController
 
+// All UI elements and logic of this VC was added in interface Builder via Storyboard
+
 @end

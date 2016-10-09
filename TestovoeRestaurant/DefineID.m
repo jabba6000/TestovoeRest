@@ -10,6 +10,8 @@
 
 @implementation DefineID
 
+//    This class converts name of category to category id
+
 /*
  <category id="23">Добавки</category>
  <category id="10">Десерты</category>

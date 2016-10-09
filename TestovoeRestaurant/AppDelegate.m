@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "DataSorter.h"
 #import "DataCollector.h"
 #import "ArrayOfCategoryImages.h"
 
@@ -19,13 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
+    //Here we start synchronous download of all offers data we need. UI will be frozen during the process
     XMLParser *parser = [XMLParser new];
     [parser performParsing];
     ArrayOfCategoryImages *imageArray = [ArrayOfCategoryImages new];
     [imageArray createArrayOfImages];
-    
     return YES;
 }
 

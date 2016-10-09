@@ -21,7 +21,6 @@
 		16D402D01DA90B160077ADC6 /* DishCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402CF1DA90B160077ADC6 /* DishCardViewController.m */; };
 		16D402D41DA921700077ADC6 /* DataCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402D31DA921700077ADC6 /* DataCollector.m */; };
 		16D402D71DA922270077ADC6 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402D61DA922270077ADC6 /* XMLParser.m */; };
-		16D402F41DA932F10077ADC6 /* DataSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402F31DA932F10077ADC6 /* DataSorter.m */; };
 		16D402F71DA938D60077ADC6 /* ArrayOfCategoryImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402F61DA938D60077ADC6 /* ArrayOfCategoryImages.m */; };
 		16D402FA1DA96C930077ADC6 /* DefineID.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402F91DA96C930077ADC6 /* DefineID.m */; };
 		C618E42DD03F2BA1358A7623 /* libPods-TestovoeRestaurant.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A78ECC7C3EAE59DCCBFEEB8E /* libPods-TestovoeRestaurant.a */; };
@@ -32,12 +31,12 @@
 		168B14571DAAB0D700C57AD7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		16D402A81DA906120077ADC6 /* TestovoeRestaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestovoeRestaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D402AC1DA906120077ADC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		16D402AE1DA906120077ADC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		16D402AF1DA906120077ADC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		16D402AE1DA906120077ADC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TestovoeRestaurant/AppDelegate.h; sourceTree = "<group>"; };
+		16D402AF1DA906120077ADC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TestovoeRestaurant/AppDelegate.m; sourceTree = "<group>"; };
 		16D402B51DA906120077ADC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16D402B71DA906120077ADC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16D402BA1DA906120077ADC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		16D402BC1DA906120077ADC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D402BC1DA906120077ADC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = TestovoeRestaurant/Info.plist; sourceTree = "<group>"; };
 		16D402C21DA909A20077ADC6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		16D402C31DA909A20077ADC6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		16D402C51DA90A3C0077ADC6 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
@@ -52,8 +51,6 @@
 		16D402D31DA921700077ADC6 /* DataCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCollector.m; sourceTree = "<group>"; };
 		16D402D51DA922270077ADC6 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
 		16D402D61DA922270077ADC6 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
-		16D402F21DA932F10077ADC6 /* DataSorter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSorter.h; sourceTree = "<group>"; };
-		16D402F31DA932F10077ADC6 /* DataSorter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSorter.m; sourceTree = "<group>"; };
 		16D402F51DA938D60077ADC6 /* ArrayOfCategoryImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayOfCategoryImages.h; sourceTree = "<group>"; };
 		16D402F61DA938D60077ADC6 /* ArrayOfCategoryImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayOfCategoryImages.m; sourceTree = "<group>"; };
 		16D402F81DA96C930077ADC6 /* DefineID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineID.h; sourceTree = "<group>"; };
@@ -77,10 +74,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		168B14591DAAC67300C57AD7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				16D402D11DA920320077ADC6 /* ViewControllers */,
+				16D402D21DA921700077ADC6 /* DataCollector.h */,
+				16D402D31DA921700077ADC6 /* DataCollector.m */,
+				16D402D51DA922270077ADC6 /* XMLParser.h */,
+				16D402D61DA922270077ADC6 /* XMLParser.m */,
+				16D402F81DA96C930077ADC6 /* DefineID.h */,
+				16D402F91DA96C930077ADC6 /* DefineID.m */,
+				16D402F51DA938D60077ADC6 /* ArrayOfCategoryImages.h */,
+				16D402F61DA938D60077ADC6 /* ArrayOfCategoryImages.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		168B145B1DAAC6D100C57AD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16D402B41DA906120077ADC6 /* Main.storyboard */,
+				16D402B71DA906120077ADC6 /* Assets.xcassets */,
+				16D402B91DA906120077ADC6 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		16D4029F1DA906120077ADC6 = {
 			isa = PBXGroup;
 			children = (
 				16D402AA1DA906120077ADC6 /* TestovoeRestaurant */,
+				16D402AE1DA906120077ADC6 /* AppDelegate.h */,
+				16D402AF1DA906120077ADC6 /* AppDelegate.m */,
+				16D402BC1DA906120077ADC6 /* Info.plist */,
 				16D402A91DA906120077ADC6 /* Products */,
 				CD078338D177FF3037F142A0 /* Pods */,
 				7753C88AACA889908F1B2082 /* Frameworks */,
@@ -98,23 +124,8 @@
 		16D402AA1DA906120077ADC6 /* TestovoeRestaurant */ = {
 			isa = PBXGroup;
 			children = (
-				16D402AE1DA906120077ADC6 /* AppDelegate.h */,
-				16D402AF1DA906120077ADC6 /* AppDelegate.m */,
-				16D402D11DA920320077ADC6 /* ViewControllers */,
-				16D402D21DA921700077ADC6 /* DataCollector.h */,
-				16D402D31DA921700077ADC6 /* DataCollector.m */,
-				16D402D51DA922270077ADC6 /* XMLParser.h */,
-				16D402D61DA922270077ADC6 /* XMLParser.m */,
-				16D402F21DA932F10077ADC6 /* DataSorter.h */,
-				16D402F31DA932F10077ADC6 /* DataSorter.m */,
-				16D402F81DA96C930077ADC6 /* DefineID.h */,
-				16D402F91DA96C930077ADC6 /* DefineID.m */,
-				16D402F51DA938D60077ADC6 /* ArrayOfCategoryImages.h */,
-				16D402F61DA938D60077ADC6 /* ArrayOfCategoryImages.m */,
-				16D402B41DA906120077ADC6 /* Main.storyboard */,
-				16D402B71DA906120077ADC6 /* Assets.xcassets */,
-				16D402B91DA906120077ADC6 /* LaunchScreen.storyboard */,
-				16D402BC1DA906120077ADC6 /* Info.plist */,
+				168B145B1DAAC6D100C57AD7 /* Resources */,
+				168B14591DAAC67300C57AD7 /* Classes */,
 				16D402AB1DA906120077ADC6 /* Supporting Files */,
 			);
 			path = TestovoeRestaurant;
@@ -287,7 +298,6 @@
 			files = (
 				16D402B01DA906120077ADC6 /* AppDelegate.m in Sources */,
 				16D402C71DA90A3C0077ADC6 /* ContactsViewController.m in Sources */,
-				16D402F41DA932F10077ADC6 /* DataSorter.m in Sources */,
 				16D402AD1DA906120077ADC6 /* main.m in Sources */,
 				16D402D41DA921700077ADC6 /* DataCollector.m in Sources */,
 				16D402FA1DA96C930077ADC6 /* DefineID.m in Sources */,
