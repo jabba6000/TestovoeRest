@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		168B14561DAAB0D200C57AD7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168B14551DAAB0D200C57AD7 /* CoreLocation.framework */; };
+		168B14581DAAB0D700C57AD7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168B14571DAAB0D700C57AD7 /* MapKit.framework */; };
 		16D402AD1DA906120077ADC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402AC1DA906120077ADC6 /* main.m */; };
 		16D402B01DA906120077ADC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D402AF1DA906120077ADC6 /* AppDelegate.m */; };
 		16D402B61DA906120077ADC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D402B41DA906120077ADC6 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		168B14551DAAB0D200C57AD7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		168B14571DAAB0D700C57AD7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		16D402A81DA906120077ADC6 /* TestovoeRestaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestovoeRestaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D402AC1DA906120077ADC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		16D402AE1DA906120077ADC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168B14581DAAB0D700C57AD7 /* MapKit.framework in Frameworks */,
+				168B14561DAAB0D200C57AD7 /* CoreLocation.framework in Frameworks */,
 				C618E42DD03F2BA1358A7623 /* libPods-TestovoeRestaurant.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +148,8 @@
 		7753C88AACA889908F1B2082 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				168B14571DAAB0D700C57AD7 /* MapKit.framework */,
+				168B14551DAAB0D200C57AD7 /* CoreLocation.framework */,
 				A78ECC7C3EAE59DCCBFEEB8E /* libPods-TestovoeRestaurant.a */,
 			);
 			name = Frameworks;
