@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "CoreDataModel">
+      <FileRef
+         location = "group:ProjectData+CoreDataProperties.h">
+      </FileRef>
+      <FileRef
+         location = "group:ProjectData+CoreDataProperties.m">
+      </FileRef>
+      <FileRef
+         location = "group:ProjectData.h">
+      </FileRef>
+      <FileRef
+         location = "group:ProjectData.m">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:TestovoeRestaurant.xcodeproj">
    </FileRef>
